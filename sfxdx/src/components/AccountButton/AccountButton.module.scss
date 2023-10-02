@@ -1,0 +1,36 @@
+.wrapper_btn{
+    display: flex;
+    padding: 0.625rem 0.75rem;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 1.25rem;
+    background: var(--light-greyscale-white, #FFF)
+}
+
+.meta_logo::before{
+    content: '';
+    display: flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url('../../../public/metamask-logo.svg');
+}
+
+.meta_acc{
+    color: var(--light-assents-accent-1-primary, #08D899);
+    text-align: center;
+
+    font-family: Manrope;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1rem; 
+}
+
+.link_icon{
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background-image: url('../../../public/copy-icon.svg');
+    cursor: pointer;
+}
