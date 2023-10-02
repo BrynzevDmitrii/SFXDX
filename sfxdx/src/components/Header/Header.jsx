@@ -8,9 +8,9 @@ export const Header=()=> {
     const handlerConnect=async ()=>{
         if(window.ethereum){
             window.ethereum.request({method:"eth_requestAccounts"}).then((account)=>setUserAccount(account[0]))
-            window.ethereum.on("accountsChanged",handleAccountsChanged())
-            const chainId = await window.ethereum.request({ method: 'eth_chainId' })
-            window.ethereum.on('chainChanged', handleChainChanged(chainId));
+            window.ethereum.on("accountsChanged",handleAccountsChanged)
+            
+            window.ethereum.on('chainChanged', handleChainChanged);
             
         }else{
             alert('Установите Metomask');
@@ -24,7 +24,7 @@ export const Header=()=> {
         }
       }
 
-    const handleChainChanged =(chainId) =>{
+    const handleChainChanged =() =>{
         window.location.reload();
         alert('новая сеть')
     }
