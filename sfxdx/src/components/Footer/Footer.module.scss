@@ -5,13 +5,19 @@
     height: 231px;
     border-top: 1px solid var(--light-greyscale-stroke, #CDD2DD);
     background: var(--light-greyscale-white, #FFF);
-    border-radius: 0 0  20px 20px;  z-index: 3;    
+    border-radius: 0 0  20px 20px;  z-index: 3;   
+    @media (max-width: 375px) {
+        height: auto;
+    } 
 }
 
 .footer_top{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 375px) {
+        flex-direction: column-reverse;
+    }
 }
 
 .blok_docs{
@@ -20,6 +26,10 @@
     width: 13rem;
     height: 5rem;
     padding: 3rem 0 5rem 4rem;
+    @media (max-width: 375px) {
+        padding: 8rem 0 5.25rem 0;
+        align-items: center;
+    }
     &__text{
         color: var(--light-greyscale-text-secondary, #676767);
         font-family: Gilroy;
@@ -37,6 +47,15 @@
     width: 50%;
     justify-content: space-between;
     padding-right: 70px;
+    @media (max-width: 375px) {
+        position: absolute;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+        top: 3rem;
+        
+    }
 
     &__logo{
         content: '';
@@ -44,6 +63,9 @@
         width: 148.164px;
         height: 24.188px;
         display: flex;
+        @media (max-width: 375px){
+            margin-bottom: 10.63rem;
+        }
     }
     &__contact{
         display: flex;

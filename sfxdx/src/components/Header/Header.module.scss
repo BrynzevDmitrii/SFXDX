@@ -6,6 +6,13 @@
     border-bottom: 1px solid var(--light-greyscale-stroke, #CDD2DD);
     background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(8px);
+    @media (max-width: 375px) {
+        display: flex;
+        width: 23.4375rem;
+        height: 4.3125rem;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .info_block{
@@ -13,12 +20,25 @@
     width: 50%;
     justify-content: space-between;
     padding-right: 4.7rem;
+    @media (max-width: 375px) {
+        width:auto;
+        padding-right: 0;
+        align-items:center ;
+      
+    }
     &__logo::before{
             content: '';
             background-image: url('../../../public/logo.svg');
             width: 148.164px;
             height: 24.188px;
             display: flex;
+            @media (max-width: 375px) {
+                background-image: url('../../../public/logo_mobile.svg');
+                width: 6.125rem;
+                height: 1rem;
+                flex-shrink: 0;margin-right: 3rem;
+                padding-right: 0;
+              }
         }
 
     &__connect {
